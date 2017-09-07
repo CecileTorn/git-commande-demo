@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,20 +8,31 @@
     <link rel="stylesheet" href="node_modules/impress.js/css/impress-demo.css">
     <title>Document</title>
 </head>
+
 <body>
     <div id="impress">
         <div id="title" class="step slide text-center" data-x="-1000">
             <q><h4>Git starter commands</h4></q>
         </div>
-        
+
+        <!-- Layer 1 -->
+        <div class="step slide" id="layer-1" data-x="1000">
+                <h4>Starter commands</h4>
+                <p>git init <span>Initialise un repository local</span></p>
+                <p>git config --local user.name <strong>&lt;user name&gt;</strong> <span>Initialise nom utilisateur (ajoute dans le fichier de config)</span></p>
+                <p>git config --local user.email <strong>&lt;user email&gt;</strong> <span>Initialise email utilisateur (ajoute dans le fichier de config)</span></p>
+        </div>
+
+
         <script src="node_modules/impress.js/js/impress.js"></script>
         <script>
             var rootElement = document.querySelector("#impress");
-            rootElement.addEventListener("impress:init", function(){
+            rootElement.addEventListener("impress:init", function () {
                 console.log("impress run");
             })
             impress().init();
         </script>
     </div>
 </body>
+
 </html>
